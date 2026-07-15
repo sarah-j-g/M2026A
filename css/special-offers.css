@@ -1,0 +1,617 @@
+/* ===========================================
+   ALGARVEHOLI-DAY
+   Special Offers
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ece6e2;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ===========================================
+   Header
+=========================================== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 60px;
+    background:#ece6e2;
+    border-bottom:3px solid #8a2be2;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo a{
+    text-decoration:none;
+    color:#222;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#8a2be2;
+}
+
+/* ===========================================
+   Dropdown
+=========================================== */
+
+.dropdown{
+    position:relative;
+}
+
+.dropbtn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background:white;
+    width:220px;
+    top:35px;
+    border-radius:10px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+
+.dropdown-content a{
+    display:block;
+    padding:14px 20px;
+}
+
+.dropdown-content a:hover{
+    background:#f7f7f7;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* ===========================================
+   Hero
+=========================================== */
+
+.hero{
+
+    text-align:center;
+    padding:90px 20px 70px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+    color:#666;
+
+}
+
+#countdown{
+
+    margin-top:35px;
+
+    display:inline-block;
+
+    background:white;
+
+    padding:20px 35px;
+
+    border-radius:14px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+#timer{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#8a2be2;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================================
+   Highlight
+=========================================== */
+
+.highlight{
+
+    max-width:1300px;
+
+    margin:70px auto;
+
+    background:white;
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.highlight-image{
+
+    position:relative;
+
+}
+
+.highlight-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.discount{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    background:#ff3d3d;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    font-size:22px;
+
+}
+
+.highlight-content{
+
+    padding:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.highlight-content h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.highlight-content p{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+.old-price{
+
+    color:#999;
+
+    text-decoration:line-through;
+
+    display:block;
+
+    font-size:22px;
+
+}
+
+.new-price{
+
+    color:#8a2be2;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+}
+
+.button{
+
+    margin-top:35px;
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#8a2be2;
+
+    color:white;
+
+    padding:18px 35px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#7020be;
+
+}
+
+/* ===========================================
+   Weitere Angebote
+=========================================== */
+
+.offers{
+
+    max-width:1300px;
+
+    margin:90px auto;
+
+}
+
+.offers h2{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    font-size:42px;
+
+}
+
+.offer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.offer-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.offer-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.offer-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.offer-card h3{
+
+    padding:25px 25px 5px;
+
+    font-size:28px;
+
+}
+
+.offer-card p{
+
+    padding:0 25px;
+
+    color:#666;
+
+}
+
+.offer-card a{
+
+    display:inline-block;
+
+    margin:25px;
+
+    text-decoration:none;
+
+    color:#8a2be2;
+
+    font-weight:bold;
+
+}
+
+.badge{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:#ff3d3d;
+
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================================
+   Vorteile
+=========================================== */
+
+.benefits{
+
+    max-width:1300px;
+
+    margin:90px auto;
+
+}
+
+.benefits h2{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.benefit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.benefit-grid div{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.benefit-grid div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.benefit-grid h3{
+
+    margin:15px 0;
+
+}
+
+/* ===========================================
+   Newsletter
+=========================================== */
+
+.newsletter{
+
+    max-width:900px;
+
+    margin:90px auto;
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.newsletter h2{
+
+    margin-bottom:15px;
+
+}
+
+.newsletter p{
+
+    color:#666;
+
+}
+
+.newsletter form{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.newsletter input{
+
+    flex:1;
+
+    padding:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.newsletter button{
+
+    background:#8a2be2;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 35px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.newsletter button:hover{
+
+    background:#7020be;
+
+}
+
+#message{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================================
+   Footer
+=========================================== */
+
+footer{
+
+    margin-top:80px;
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .highlight{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .highlight-content{
+
+        padding:35px;
+
+    }
+
+    .newsletter form{
+
+        flex-direction:column;
+
+    }
+
+}

@@ -1,0 +1,260 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ece6e2;
+    color:#222;
+    line-height:1.6;
+
+}
+
+
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 60px;
+    background:#ece6e2;
+    border-bottom:3px solid #8a2be2;
+
+}
+
+
+
+.logo a{
+
+    text-decoration:none;
+    color:#222;
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+
+
+nav{
+
+    display:flex;
+    gap:35px;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+    color:#222;
+
+}
+
+
+nav a:hover,
+nav a.active{
+
+    color:#8a2be2;
+
+}
+
+
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+.dropbtn{
+
+    background:none;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+
+.dropdown-content{
+
+    display:none;
+    position:absolute;
+    background:white;
+    width:220px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+.dropdown-content a{
+
+    display:block;
+    padding:15px;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+
+
+/* Hero */
+
+
+.hero{
+
+    text-align:center;
+    padding:90px 20px;
+
+}
+
+
+.hero h1{
+
+    font-size:58px;
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    font-size:20px;
+    color:#666;
+
+}
+
+
+
+
+/* FAQ */
+
+
+.faq-container{
+
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+
+}
+
+
+
+.faq-card{
+
+    background:white;
+    border-radius:18px;
+    margin-bottom:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    overflow:hidden;
+
+}
+
+
+
+.question{
+
+    width:100%;
+    padding:25px;
+    border:none;
+    background:white;
+    font-size:20px;
+    font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+
+}
+
+
+
+.question span{
+
+    color:#8a2be2;
+    font-size:28px;
+
+}
+
+
+
+.answer{
+
+    max-height:0;
+    overflow:hidden;
+    transition:.4s;
+    padding:0 25px;
+
+}
+
+
+
+.answer p{
+
+    padding-bottom:25px;
+    color:#555;
+
+}
+
+
+
+.faq-card.active .answer{
+
+    max-height:200px;
+
+}
+
+
+
+footer{
+
+    margin-top:80px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:35px;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    header{
+
+        flex-direction:column;
+        gap:20px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+
+    nav{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+
+}

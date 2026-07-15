@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 100%; max-width: 1280px; margin: 0 auto;">
+    <iframe
+            id="host-websites-booking-module"
+            style="aspect-ratio: 1280 / 1000; width: 100%; min-height: 500px; height: 500px; border: none;"
+            src="https://widget.holiduhost.com/widget/100b568e-14df-4bb2-a000-b80a904e9f72">
+    </iframe>
+</div>
+<script>
+    window.addEventListener('message', function(event) {
+        if (event.data.type === 'resize') {
+            const iframe = document.getElementById('host-websites-booking-module');
+            if (iframe) {
+                iframe.style.height = event.data.height + 'px';
+            }
+        }
+    });
+</script>
+
+<div style="width: 100%; max-width: 1280px; margin: 0 auto;">
+    <iframe
+            id="host-websites-booking-module"
+            style="aspect-ratio: 1280 / 1000; width: 100%; min-height: 500px; height: 500px; border: none;"
+            src="https://widget.holiduhost.com/widget/100b568e-14df-4bb2-a000-b80a904e9f72">
+    </iframe>
+</div>
+<script>
+    window.addEventListener('message', function(event) {
+        if (event.data.type === 'resize') {
+            const iframe = document.getElementById('host-websites-booking-module');
+            if (iframe) {
+                iframe.style.height = event.data.height + 'px';
+            }
+        }
+    });
+</script>
+</body>
+</html>
